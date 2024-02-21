@@ -8,12 +8,13 @@ function addItemToCart() {
   setItemInCart((itemInCart) => !itemInCart)
 }
 const itemClass = itemInCart ? "in-cart" : ""
+const buttonColor = itemInCart ? "remove" : "add" 
 
   return (
     <li className={itemClass}>
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add" onClick={addItemToCart}>{itemInCart ? 'Remove From Cart' : 'Add to Cart'}</button>
+      <button className={buttonColor} onClick={addItemToCart}>{itemInCart ? 'Remove From Cart' : 'Add to Cart'}</button>
     </li>
   );
 }

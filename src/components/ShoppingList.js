@@ -3,7 +3,6 @@ import Item from "./Item";
 import { useState } from "react";
 
 function ShoppingList({ items }) {
-  const [ selectedCategory, setSelectedCategory ] = useState(items)
   const [ filterBy, setFilterBy ] = useState('All')
 
   const selectItems = items.filter((item) => {
